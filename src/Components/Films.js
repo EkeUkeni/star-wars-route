@@ -1,5 +1,5 @@
 import { useEffect, useState} from "react"; 
-import MoreInfoBtn from "./MoreInfo";
+import { Link } from "react-router-dom";
 
 const Films = () => {
     const [loading, setLoading] = useState(true);
@@ -29,6 +29,7 @@ const Films = () => {
             })
 
       }, [])
+     
   return (
     <>
       <div style={{background:"black"}}>
@@ -44,13 +45,19 @@ const Films = () => {
                                   <div className='title'><h2>{item.title}</h2></div>
                                   <div className='date'><p>{item.release_date}</p></div>
                                   <div className='redborder'><p>{item.opening_crawl.split('\n').slice(0, 10).join('\n')}...</p></div>
-                                  <div ><MoreInfoBtn text={'More Info'}/></div>
+                                  <div>
+                                    <nav>
+                                      <Link style={{color:"yellow"}} to='/movies'>More Info</Link>
+                                    </nav>
+                                    
+                                  </div>
                                 </div> 
                               </div>
                           </li>
                       )
                   })}
         </ul>
+       
       </div>
     </>
   )
