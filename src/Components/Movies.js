@@ -1,6 +1,6 @@
 import {useEffect, useState} from 'react'
 import { Link } from 'react-router-dom';
-
+import starWarsLogo from '../star.PNG'
 
 const Movies = () => {
     const [loading, setLoading] = useState(true);
@@ -34,7 +34,7 @@ const Movies = () => {
     return (
       <>
         <div style={{background:"black"}}>
-          <h1>Star Wars</h1>
+          <img className='logo' src={starWarsLogo} alt='logo'/>
           {loading && <div>Data is loading. Please wait...</div>}
           {error && <div>{`There is a problem fetching your data - ${error}`}</div>}
           <ul>
