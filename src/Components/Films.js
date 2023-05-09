@@ -1,5 +1,5 @@
 import { useEffect, useState} from "react"; 
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import starWarsLogo from '../star.PNG'
 
 const Films = () => {
@@ -48,7 +48,7 @@ const Films = () => {
                                   <div className='redborder'><p>{item.opening_crawl.split('\n').slice(0, 10).join('\n')}...</p></div>
                                   <div>
                                     <nav>
-                                      <Link style={{color:"yellow"}} to='/movies'>More Info</Link>
+                                      <NavLink style={{color:"yellow"}} to="/movies">More Info</NavLink>
                                     </nav>
                                     
                                   </div>

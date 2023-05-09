@@ -1,7 +1,7 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
 
-const Details404 = () => {
+const NotFound = () => {
     const navigate = useNavigate()
   return (
     <div className='pagedetails404'>
@@ -28,4 +28,4 @@ const Details404 = () => {
   )
 }
 
-export default Details404
+export default NotFound

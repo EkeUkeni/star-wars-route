@@ -1,7 +1,7 @@
 import React from 'react'
 import { Route, Routes } from 'react-router-dom'
 import Films from './Components/Films'
-import Details404 from './Details404'
+import NotFound from './NotFound'
 import Movies from './Components/Movies'
 
 const App = () => {
@@ -9,9 +9,9 @@ const App = () => {
     <Routes>
         <Route path='/' element={<Films/>}/>
         <Route path='/movies' element={<Movies/>}/>
-
+        
         {/* * - wildcard */}
-        <Route path='*' element={<Details404 />} />
+        <Route path='*' element={<NotFound />} />
     </Routes>
   )
 }
