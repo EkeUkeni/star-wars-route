@@ -1,5 +1,5 @@
 import { useEffect, useState} from "react"; 
-import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 import starWarsLogo from '../star.PNG'
 
 const Films = () => {
@@ -46,12 +46,8 @@ const Films = () => {
                                   <div className='title'><h2>{item.title}</h2></div>
                                   <div className='date'><p>{item.release_date}</p></div>
                                   <div className='redborder'><p>{item.opening_crawl.split('\n').slice(0, 10).join('\n')}...</p></div>
-                                  <div>
-                                    <nav>
-                                      <NavLink style={{color:"yellow"}} to="/movies">More Info</NavLink>
-                                    </nav>
-                                    
-                                  </div>
+                                  <Link style={{color:"yellow"}} to={`/item/${item.episode_id}`}>More Info
+                                  </Link> 
                                 </div> 
                               </div>
                           </li>
